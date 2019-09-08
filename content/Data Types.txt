@@ -1,0 +1,29 @@
+** draft **
+Data types on x64 processors:
+
+Req's: basic understanding of integer and real mathematics number systems
+
+There are two major distinctions in data types
+	
+	Floating point (will be covered separately)
+	
+	Integer/scalar data types
+		Unsigned - raw binary format (ones and zeros)
+		Signed - Use 'twos compliment' to store the sign information
+		BCD - Binary Coded Decimal format (will be covered separately)
+		
+For simplicity, using the .data directive for data block
+
+Caching and alignment of data types	
+	Consider how and why you are performing data alignment on your data. 
+	Data alignment aligns data on boundaries of a specific size. This can make data
+	access (considerably) faster for a running process. The reason for aligning data
+	in set size boundaries is due to the way data is stored in memories. Caches
+	are memory storage areas inside the processor which are order of magnitudes faster
+	in accessing data for processing and storing, than the onboard RAM.  They are also 
+	much smaller, and are structured in a specific way. Not optimizing for the CPU cache
+	can make a program slow down by 100s, even 1000s of times.  This is one of the
+	biggest caveats of object oriented programming. As OOP data structures don't tend to 
+	account for this.  Data oriented designs, normally, should account for the caches.  
+	A goood trade-off is to transform OOP data structures into cache friendly forms 
+	before running CPU intensive loops and algorithms.

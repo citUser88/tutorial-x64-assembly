@@ -1,0 +1,46 @@
+** draft **
+Calling conventions describe how the stack is setup and how parameters are passed to
+a called procedure. As well as how data is returned to the calling process
+
+System V Calling Convention
+	**in progress**
+
+Windows API x64 Calling Convention
+	
+	Fast Call Calling Convention
+	
+	Parameter Passing
+	
+	Standard means to pass parameters to an Application Binary Interface (ABI)
+
+	Windows x64 defaults to the fast-call calling convention.
+	
+	Shadow-store is implemented on the stack to make space for the calling
+	code to store the registers used in calls and/or debugging
+	
+	Arguments larger than 8 bytes, are passed by a using a reference value.
+	This is similar to pass by reference in C / C++ programs
+	
+	Integer values values are passed in these GRP register:
+		RCX, RDX, R8, R9
+		
+	Floating point values are passed using these XMM registers:
+		XMM0, XMM1, XMM2, XMM3
+		
+	Registers that may end up modified by the calL, and should be saved/push-popped:
+		RAX, R10, R11, XMM4, XMM5 considered volatile
+		
+	Other registers not mentioned above are non-volatile and should be safe
+	from being modified by the procedure called in the fast-call calling convention
+	
+	5th and subsequent, or variable arguments are passed with the stack, this is the 
+	normal method for passing parameters 
+	
+	Return Values
+	
+	Return values of up to 64-bits are returned in the RAX register
+	
+	Floats and vector types are returned in the XMM0 SIMD media register,
+		furthermore, bits not defined as part of the return value,
+		will not be in an undefined state		
+	
