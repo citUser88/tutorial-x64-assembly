@@ -1,0 +1,11 @@
+# Object files
+.obj
+
+# Windows executable files
+.exe
+
+# Link files
+.lnk
+
+# Windows desktop .ini files
+desktop.ini
