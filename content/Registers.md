@@ -112,8 +112,7 @@ Hexadecimal is a base 16 system.  It starts at 0 and has 16 unique values.
 - This is the reason why hexadecimal is so convenient. That it allows the 16 values each to be represented with a single symbol
 - This makes a ton of sense once you work with hex and binary long enough, also, in time, this will become second nature for you
 
-**LITTLE ENDIAN VS. BIG ENDIAN** - x86 architectures use the little-endian storage format for data.  It means the smaller grouping of bytes of the considered chunk of data are stored as the offset closest to the beginning of the location in memory where the entire value is stored.  At the byte level the representations are unchanged across the specifications.  A 2 byte value (called a word) of 1234h in big endian would be stored as 3412h.  A larger value of say, 12345678h (a doubleword) would be stored as 78563412h in little-endian.  It is important to know which specification the architecture is using to store data.  It may not be a very intuitive concept for many.  I hope this clarifaction helps, somewhat.
-
+**LITTLE ENDIAN VS. BIG ENDIAN** - https://en.wikipedia.org/wiki/Endianness
 ---
 
 ##  rFLAG register
