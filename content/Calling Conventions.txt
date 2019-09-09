@@ -21,7 +21,7 @@ Windows API x64 Calling Convention
 	Arguments larger than 8 bytes, are passed by a using a reference value.
 	This is similar to pass by reference in C / C++ programs
 	
-	Integer values values are passed in these GRP register:
+	Integer values values are passed in these General Purpose Registers (GPRs):
 		RCX, RDX, R8, R9
 		
 	Floating point values are passed using these XMM registers:
